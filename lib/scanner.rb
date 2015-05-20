@@ -18,7 +18,8 @@ class String
 
   def load_dictionary
     filename = @options[:language] || 'english'
-    file = File.open("lib/dictionaries/#{filename}", "r")
+    path =  File.dirname(__FILE__) 
+    file = File.open("#{path}/dictionaries/#{filename}", "r")
     @dictionary = file.read.downcase.split(/\n/)
     file.close 
     @dictionary
