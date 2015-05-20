@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = RuBee::VERSION
   spec.authors       = ["dan"]
   spec.email         = ["dbickford83@gmail.com"]
-  spec.summary       = %q{Dictionary in for ruby.}
-  spec.description   = %q{See if a string contains any misspelled words.}
+  spec.summary       = %q{Dictionary for Ruby String.}
+  spec.description   = %q{See if a string contains any incorrect words. Use by 'this is a test'.correct?}
   spec.homepage      = ""
   spec.license       = "MIT"
 

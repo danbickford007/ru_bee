@@ -21,6 +21,13 @@ Or install it yourself as:
 
 ## Usage
 
+`#correct?`
+
+######boolean
+
+Does the string contain a misspelling?
+
+
 `"This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".correct?`
 
 ##### `=> true`
