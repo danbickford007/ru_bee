@@ -2,7 +2,8 @@ class String
 
   @dictionary = [] 
 
-  def correct? 
+  def correct? options={}
+    @options = options
     get_parts
     load_dictionary
     check
@@ -13,10 +14,11 @@ class String
   end
 
   def load_dictionary
-     file = File.open('lib/words', "r")
-     @dictionary = file.read.downcase.split(/\n/)
-     file.close 
-     @dictionary
+    filename = @options[:language] || 'english'
+    file = File.open("lib/#{filename}", "r")
+    @dictionary = file.read.downcase.split(/\n/)
+    file.close 
+    @dictionary
   end
 
   def check

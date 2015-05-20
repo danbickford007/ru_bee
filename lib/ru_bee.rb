@@ -1,7 +1,5 @@
 require "ru_bee/version"
-require "string"
+require "scanner"
 
 module RuBee
-
-
 end

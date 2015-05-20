@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "ru_bee"
   spec.version       = RuBee::VERSION
   spec.authors       = ["dan"]
-  spec.email         = ["danbickford007@yahoo.com"]
-  spec.summary       = %q{.}
-  spec.description   = %q{.}
+  spec.email         = ["dbickford83@gmail.com"]
+  spec.summary       = %q{Dictionary in for ruby.}
+  spec.description   = %q{See if a string contains any misspelled words.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

@@ -1,6 +1,7 @@
 # RuBee
 
-TODO: Write a gem description
+Spellcheck for Ruby String.
+
 
 ## Installation
 
@@ -20,12 +21,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+`"This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!"`
+
+# => true
+
+`This santence contains a typo.`
+
+# => false
+
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/ru_bee/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+# Dictionaries
+Add issue or submit pull request to add different languages or make additions to the library.
+Each dictionary is in lib/dictionaries
+
+
