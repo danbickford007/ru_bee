@@ -51,4 +51,20 @@ describe String do
 
   end
 
+  describe '#remove_es' do
+
+    it 'should trim past with es' do
+      expect(test_string_good.send('remove_es', 'testes')).to eq('test')
+    end
+
+  end
+
+  describe '#remove_ing' do
+
+    it 'should trim past with ing' do
+      expect(test_string_good.send('remove_ing', 'testing')).to eq('test')
+    end
+
+  end
+
 end
