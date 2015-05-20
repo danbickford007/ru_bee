@@ -27,6 +27,12 @@ Or install it yourself as:
 
 Does the string contain a misspelling?
 
+######arguments
+
+`#correct? language: 'english'`
+
+Other languages coming...
+
 
 `"This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".correct?`
 
