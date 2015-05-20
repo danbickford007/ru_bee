@@ -3,7 +3,7 @@ require 'scanner'
 describe String do
 
   let(:test_string_good) { "This is a test string. It doesn't have 123 any issues." }
-  let(:test_string_bad) { "This is a test string. But it conaens a bad word." }
+  let(:test_string_bad) { "This is a test string. But it conaens a bad word. bergerb" }
 
 
   describe '#correct?' do
@@ -17,6 +17,23 @@ describe String do
     end
 
   end
+
+  describe '#misspellings' do
+
+    it 'should return array of misspelled words' do
+      expect(test_string_bad.misspellings).to eq(['conaens', 'bergerb'])
+    end
+
+    it 'should return array length of 2' do
+      expect(test_string_bad.misspellings.count).to eq(2)
+    end
+
+    it 'should return array empty array if all correct' do
+      expect(test_string_good.misspellings.count).to eq(0)
+    end
+
+  end
+
 
   describe '#get_parts' do
 
@@ -66,5 +83,6 @@ describe String do
     end
 
   end
+
 
 end

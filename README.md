@@ -43,6 +43,28 @@ Other languages coming...
 ##### `=> false`
 
 
+
+`#misspellings`
+
+######Array
+
+Array of misspellings from String
+
+######arguments
+
+`#misspellings? language: 'english'`
+
+Other languages coming...
+
+`"This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".misspellings`
+
+##### `=> []`
+
+`"This santence contains a typo.".correct?`
+
+##### `=> ['santence']`
+
+
 ## Contributing
 
 #### Dictionaries
