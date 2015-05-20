@@ -1,28 +1,25 @@
 class String 
 
-  @dictionary = [] 
-  @options = {}
-
   def correct? options={}
     @options = options
-    get_parts
-    load_dictionary
     check
   end
 
   private
 
-  def get_parts 
-    @parts = self.downcase.gsub(/[\'\"]/, '').scan(/[a-z]+/)
+  def words
+    @words ||= self.downcase.gsub(/[\'\"]/, '').scan(/[a-z]+/)
   end
 
-  def load_dictionary
-    filename = @options[:language] || 'english'
-    path =  File.dirname(__FILE__) 
-    file = File.open("#{path}/dictionaries/#{filename}", "r")
-    @dictionary = file.read.downcase.split(/\n/)
-    file.close 
-    @dictionary
+  def dictionary
+    @dictionary ||= begin
+      filename = @options[:language] || 'english'
+      path =  File.dirname(__FILE__)
+      file = File.open("#{path}/dictionaries/#{filename}", "r")
+      contents = file.read.downcase.split(/\n/)
+      file.close
+      contents || []
+    end
   end
 
   def remove_s word
@@ -54,15 +51,15 @@ class String
   end
 
   def check
-    @parts.each do |word|
-      unless @dictionary.include?("#{word}") or 
-        @dictionary.include?("#{remove_s(word)}") or 
-        @dictionary.include?("#{remove_ed(word)}") or
-        @dictionary.include?("#{remove_ing(word)}") or
-        @dictionary.include?("#{remove_es(word)}") 
-        return false 
+    words.each do |word|
+      unless dictionary.include?("#{word}") or
+        dictionary.include?("#{remove_s(word)}") or
+        dictionary.include?("#{remove_ed(word)}") or
+        dictionary.include?("#{remove_ing(word)}") or
+        dictionary.include?("#{remove_es(word)}")
+        return false
       end
-    end 
+    end
     true
   end
 

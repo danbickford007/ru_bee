@@ -18,10 +18,10 @@ describe String do
 
   end
 
-  describe '#get_parts' do
+  describe '#words' do
 
     it 'should break string into word parts' do
-      expect(test_string_good.send('get_parts').count).to eq(10)
+      expect(test_string_good.send('words').count).to eq(10)
     end
 
   end
@@ -30,7 +30,7 @@ describe String do
 
     it 'should set DICTIONARY to' do
       test_string_good.correct?
-      expect(test_string_good.send('load_dictionary').count).to eq(235887)
+      expect(test_string_good.send('dictionary').count).to eq(235887)
     end
 
   end
