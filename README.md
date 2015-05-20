@@ -23,11 +23,11 @@ Or install it yourself as:
 
 `"This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!"`
 
-# => true
+### => true
 
 `This santence contains a typo.`
 
-# => false
+### => false
 
 
 ## Contributing
