@@ -21,13 +21,13 @@ Or install it yourself as:
 
 ## Usage
 
-`"This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!"`
+`"This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".correct?`
 
-# => true
+##### `=> true`
 
-`This santence contains a typo.`
+`"This santence contains a typo.".correct?`
 
-# => false
+##### `=> false`
 
 
 ## Contributing
