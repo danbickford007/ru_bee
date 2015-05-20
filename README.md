@@ -39,7 +39,7 @@ Does the string contain a misspelling?
 
 ## Contributing
 
-# Dictionaries
+#### Dictionaries
 Add issue or submit pull request to add different languages or make additions to the library.
 Each dictionary is in lib/dictionaries
 
