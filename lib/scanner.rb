@@ -24,9 +24,25 @@ class String
     @dictionary
   end
 
+  def remove_s word
+    if word[-1] == 's'
+      return word[0...-1] 
+    end 
+    word
+  end
+
+  def remove_ed(word)
+    if word[-1] == 'd' and word[-2] == 'e' 
+      return word[0...-2] 
+    end 
+    word
+  end
+
   def check
     @parts.each do |word|
-      unless @dictionary.include?("#{word}") or @dictionary.include?("#{word[0...-1]}")
+      unless @dictionary.include?("#{word}") or 
+        @dictionary.include?("#{remove_s(word)}") or 
+        @dictionary.include?("#{remove_ed(word)}")
         return false 
       end
     end 

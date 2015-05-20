@@ -30,7 +30,23 @@ describe String do
 
     it 'should set DICTIONARY to' do
       test_string_good.correct?
-      expect(test_string_good.send('load_dictionary').count).to eq(235886)
+      expect(test_string_good.send('load_dictionary').count).to eq(235887)
+    end
+
+  end
+
+  describe '#remove_s' do
+
+    it 'should trim plural to singluar with s' do
+      expect(test_string_good.send('remove_s', 'tests')).to eq('test')
+    end
+
+  end
+
+  describe '#remove_ed' do
+
+    it 'should trim past with ed' do
+      expect(test_string_good.send('remove_ed', 'tested')).to eq('test')
     end
 
   end
