@@ -31,8 +31,7 @@ class Suggestion
   end
 
   def try_3
-    parts = @word.chars.to_a.join('')
-    @dictionary.join("\n").scan(/(.*[#{parts}]+.*)/).flatten
+    @dictionary.join("\n").scan(/(.*[#{@word}]+.*)/).flatten
   end
 
   def find word
