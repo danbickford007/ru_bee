@@ -50,15 +50,6 @@ describe String do
 
   end
 
-  describe '#load_dictionary' do
-
-    it 'should set DICTIONARY to' do
-      test_string_good.correct?
-      expect(test_string_good.send('dictionary').count).to eq(235887)
-    end
-
-  end
-
   describe '#remove_s' do
 
     it 'should trim plural to singluar with s' do
