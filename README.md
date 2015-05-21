@@ -76,7 +76,7 @@ Array of misspellings from String
 ##### `=> []`
 
 ```ruby
-"This santence contains a typo.".correct?
+"This santence contains a typo.".misspellings
 ```
 
 ##### `=> ['santence']`
@@ -90,7 +90,11 @@ Array of misspellings from String
 
 Returns array of hashes consisting of word and suggestions.
 
-Ex:  `{word: 'fla', suggestions: ["acriflavin", "acriflavine"...]}`
+```ruby
+'fla'.misspellings suggestions: true
+```
+
+##### `=> [{word: 'fla', suggestions: ["acriflavin", "acriflavine"...]}]`
 
 
 
