@@ -37,7 +37,11 @@ describe Suggestion do
   describe '#try_1' do
     
     it 'should return 2 results' do
-      expect(suggestion.try_1).to eq(['tester', 'testit'])
+      expect(suggestion.try_1([])).to eq(['tester', 'testit'])
+    end
+
+    it 'should carry over results' do
+      expect(suggestion.try_1(['carryover'])).to eq(['carryover', 'tester', 'testit'])
     end
 
   end
@@ -45,7 +49,11 @@ describe Suggestion do
   describe '#try_2' do
     
     it 'should return 2 results' do
-      expect(suggestion.try_2).to eq(['tester', 'testit'])
+      expect(suggestion.try_2([])).to eq(['tester', 'testit'])
+    end
+
+    it 'should carry over results' do
+      expect(suggestion.try_2(['carryover'])).to eq(['carryover', 'tester', 'testit'])
     end
 
   end
@@ -53,7 +61,35 @@ describe Suggestion do
   describe '#try_3' do
     
     it 'should return 2 results' do
-      expect(suggestion.try_3).to eq(['tester', 'testit'])
+      expect(suggestion.try_3([])).to eq(['tester', 'testit'])
+    end
+
+    it 'should carry over results' do
+      expect(suggestion.try_3(['carryover'])).to eq(['carryover', 'tester', 'testit'])
+    end
+
+  end
+
+  describe '#try_4' do
+    
+    it 'should return 2 results' do
+      expect(suggestion.try_4([])).to eq(['tester', 'testit'])
+    end
+
+    it 'should carry over results' do
+      expect(suggestion.try_4(['carryover'])).to eq(['carryover', 'tester', 'testit'])
+    end
+
+  end
+
+  describe '#try_5' do
+    
+    it 'should return 2 results' do
+      expect(suggestion.try_5([])).to eq(['tester', 'testit'])
+    end
+
+    it 'should carry over results' do
+      expect(suggestion.try_5(['carryover'])).to eq(['carryover', 'tester', 'testit'])
     end
 
   end

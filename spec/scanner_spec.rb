@@ -34,7 +34,6 @@ describe String do
 
     it 'should return suggestions if optioned' do
       suggestions = test_string_bad.misspellings(suggestions: true)
-      expect(suggestions[0][:suggestions]).to eq([])
       answer = %w{berger brauneberger coberger johannisberger scharlachberger steinberger weinbergerite habergeon hauberget ramberge}
       expect(suggestions[1][:suggestions]).to eq(answer)
     end
