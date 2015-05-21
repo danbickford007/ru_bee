@@ -34,4 +34,28 @@ describe Suggestion do
 
   end
 
+  describe '#try_1' do
+    
+    it 'should return 2 results' do
+      expect(suggestion.try_1).to eq(['tester', 'testit'])
+    end
+
+  end
+
+  describe '#try_2' do
+    
+    it 'should return 2 results' do
+      expect(suggestion.try_2).to eq(['tester', 'testit'])
+    end
+
+  end
+
+  describe '#try_3' do
+    
+    it 'should return 2 results' do
+      expect(suggestion.try_3).to eq(['tester', 'testit'])
+    end
+
+  end
+
 end
