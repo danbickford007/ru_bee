@@ -1,3 +1,5 @@
+require 'suggestion'
+
 class String 
 
   def correct? options={}
@@ -7,7 +9,7 @@ class String
 
   def misspellings options={}
     @options = options
-    check true
+    check({collect: true, suggestions: @options[:suggestions]})
     @bad_words
   end
 
@@ -56,7 +58,7 @@ class String
     word
   end
 
-  def check collect=false
+  def check opts={}
     @bad_words = []
     words.each do |word|
       unless dictionary.include?("#{word}") or
@@ -64,8 +66,9 @@ class String
         dictionary.include?("#{remove_ed(word)}") or
         dictionary.include?("#{remove_ing(word)}") or
         dictionary.include?("#{remove_es(word)}")
-        @bad_words << word
-        return false unless collect
+        suggestion = Suggestion.new word, @dictionary
+        @bad_words << (opts[:suggestions] ? suggestion.search : word)
+        return false unless opts[:collect]
       end
     end
     true
