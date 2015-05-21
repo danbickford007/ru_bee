@@ -21,7 +21,9 @@ Or install it yourself as:
 
 ## Usage
 
-`#correct?`
+```
+#correct?
+```
 
 ######boolean
 
@@ -29,22 +31,30 @@ Does the string contain a misspelling?
 
 ######arguments
 
-`#correct? language: 'english'`
+```
+#correct? language: 'english'
+```
 
 Other languages coming...
 
 
-`"This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".correct?`
+```
+"This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".correct?
+```
 
 ##### `=> true`
 
-`"This santence contains a typo.".correct?`
+```
+"This santence contains a typo.".correct?
+```
 
 ##### `=> false`
 
 
 
-`#misspellings`
+```
+#misspellings
+```
 
 ######Array
 
@@ -52,15 +62,21 @@ Array of misspellings from String
 
 ######arguments
 
-`#misspellings? language: 'english'`
+```
+#misspellings? language: 'english'
+```
 
 Other languages coming...
 
-`"This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".misspellings`
+```
+"This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".misspellings
+```
 
 ##### `=> []`
 
-`"This santence contains a typo.".correct?`
+```
+"This santence contains a typo.".correct?
+```
 
 ##### `=> ['santence']`
 
