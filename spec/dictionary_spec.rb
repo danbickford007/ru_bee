@@ -14,7 +14,7 @@ describe Dictionary do
 
   describe '.instance' do
 
-    it 'should only 1 instance' do
+    it 'should only have 1 instance' do
       dict = Dictionary.instance
       expect(dictionary.object_id).to eq(dict.object_id)
     end

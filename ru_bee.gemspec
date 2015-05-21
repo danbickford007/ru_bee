@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["dan"]
   spec.email         = ["danbickford007@yahoo.com"]
   spec.summary       = %q{Dictionary for Ruby String.}
-  spec.description   = %q{See if a string contains any incorrect words. Use by 'this is a test'.correct?}
+  spec.description   = %q{Checks Ruby String for misspellings. Usage: 'this is a test'.correct?  'this is a test'.misspellings(suggestions: true)}
   spec.homepage      = ""
   spec.license       = "MIT"
 
