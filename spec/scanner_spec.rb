@@ -18,6 +18,15 @@ describe String do
 
   end
 
+  describe '#spell_check' do
+
+    it 'should return true with correct word' do
+      expect(test_string_good).to receive(:misspellings)
+      test_string_good.spell_check
+    end
+
+  end
+
   describe '#misspellings' do
 
     it 'should return array of misspelled words' do

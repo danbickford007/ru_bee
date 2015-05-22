@@ -8,6 +8,10 @@ class String
     check
   end
 
+  def spell_check opt={}
+    misspellings opt.merge!(suggestions: true)
+  end
+
   def misspellings options={}
     @options = options
     check({collect: true, suggestions: @options[:suggestions]})
