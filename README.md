@@ -29,7 +29,7 @@ Or install it yourself as:
 
 ######boolean
 
-Does the string contain a misspelling?
+Checks String for misspelled words. Returns boolean.
 
 ######arguments
 
@@ -37,37 +37,55 @@ Does the string contain a misspelling?
 #correct? language: 'english'
 ```
 
-Other languages coming...
+_Other languages coming..._
 
+######usage
 
 ```ruby
 "This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".correct?
 ```
 
-##### `=> true`
+###### `=> true`
 
 ```ruby
 "This santence contains a typo.".correct?
 ```
 
-##### `=> false`
+###### `=> false`
 
 
-##misspellings 
+###spell_check
+
+```
+#spell_check
+```
+
+######array
+
+```
+#spell_check language: 'english'
+```
+
+Returns array of hashes consisting of word and suggestioned corrections.
+
+######usage
+
+```ruby
+'fla'.spell_check 
+```
+
+##### `=> [{word: 'fla', suggestions: ["acriflavin", "acriflavine"...]}]`
+
+
+###misspellings 
 
 ```
 #misspellings
 ```
 
-######Array
+######array
 
 Array of misspellings from String
-
-######arguments
-
-```
-#misspellings? language: 'english'
-```
 
 ```ruby
 "This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".misspellings
@@ -82,24 +100,10 @@ Array of misspellings from String
 ##### `=> ['santence']`
 
 
-###suggestions
-
-```
-#misspellings(suggestions: true)
-```
-
-Returns array of hashes consisting of word and suggestions.
-
-```ruby
-'fla'.misspellings suggestions: true
-```
-
-##### `=> [{word: 'fla', suggestions: ["acriflavin", "acriflavine"...]}]`
-
-
-
-
 ## Contributing
+
+#### Code
+fork or pr away
 
 #### Dictionaries
 Add issue or submit pull request to add different languages or make additions to the library.
