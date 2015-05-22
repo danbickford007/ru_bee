@@ -74,7 +74,7 @@ Returns array of hashes consisting of word and suggestioned corrections.
 'fla'.spell_check 
 ```
 
-##### `=> [{word: 'fla', suggestions: ["acriflavin", "acriflavine"...]}]`
+##### `=> [{word: 'fla', suggestions: ["flab", "flabbergast", "flabbergastation", "flabbergasted"...]}]`
 
 
 ###misspellings 
