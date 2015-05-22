@@ -1,6 +1,6 @@
 # RuBee
 
-Spellcheck for Ruby String.
+Spell check for Ruby String.
 
 
 ## Installation
