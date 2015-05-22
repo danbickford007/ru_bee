@@ -74,7 +74,7 @@ Returns array of hashes consisting of word and suggestioned corrections.
 'fla'.spell_check 
 ```
 
-##### `=> [{word: 'fla', suggestions: ["flab", "flabbergast", "flabbergastation", "flabbergasted"...]}]`
+###### `=> [{word: 'fla', suggestions: ["flab", "flabbergast", "flabbergastation", "flabbergasted"...]}]`
 
 
 ###misspellings 
@@ -91,13 +91,13 @@ Array of misspellings from String
 "This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".misspellings
 ```
 
-##### `=> []`
+###### `=> []`
 
 ```ruby
 "This santence contains a typo.".misspellings
 ```
 
-##### `=> ['santence']`
+###### `=> ['santence']`
 
 
 ## Contributing
