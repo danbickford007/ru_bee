@@ -1,3 +1,5 @@
+require 'zlib'
+
 class Dictionary
 
   def initialize options={}
@@ -13,7 +15,7 @@ class Dictionary
       filename = @options[:language] || 'english'
       path =  File.dirname(__FILE__)
       file = File.open("#{path}/dictionaries/#{filename}", "r")
-      contents = file.read.downcase.split(/\n/)
+      contents = decompress(file.read).downcase.split(/\n/)
       file.close
       contents || []
     end
@@ -21,6 +23,12 @@ class Dictionary
 
   def check word
     contents.include?(word)
+  end
+
+  private
+
+  def decompress text
+    Zlib::Inflate.inflate(text)
   end
 
 end
