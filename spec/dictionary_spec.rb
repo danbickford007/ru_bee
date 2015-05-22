@@ -7,7 +7,7 @@ describe Dictionary do
   describe '#contents' do
 
     it 'should have x amount contents' do
-      expect(dictionary.contents.count).to eq(235887)
+      expect(dictionary.contents.count).to eq(261473)
     end
 
   end
