@@ -3,7 +3,7 @@ class Suggestion
   def initialize word, dictionary
     @word = word
     @dictionary = dictionary
-  end 
+  end
 
   def search
     format suggestions.take(50)
@@ -19,8 +19,8 @@ class Suggestion
   end
 
   def try_0 result
-    result | find_by_exp(/(^#{@word}.*)/) | 
-      find_by_exp(/(^#{@word[0...-1]}.*)/) | 
+    result | find_by_exp(/(^#{@word}.*)/) |
+      find_by_exp(/(^#{@word[0...-1]}.*)/) |
       find_by_exp(/(^#{@word[0...-2]}.*)/)
   end
 
@@ -30,8 +30,8 @@ class Suggestion
 
   def try_2 result
     result |
-    find(@word.reverse[0...-1].reverse) | 
-      find(@word.reverse[0...-2].reverse) | 
+    find(@word.reverse[0...-1].reverse) |
+      find(@word.reverse[0...-2].reverse) |
       find(@word.reverse[0...-3].reverse)
   end
 
@@ -51,7 +51,7 @@ class Suggestion
     @dictionary.join("\n").scan(/(.*#{word}.*)/).flatten
   end
 
-  def find_by_exp exp 
+  def find_by_exp exp
     @dictionary.join("\n").scan(exp).flatten
   end
 
