@@ -21,17 +21,17 @@ Or install it yourself as:
 
 ## Usage
 
-###correct?
+### correct?
 
 ```
 #correct?
 ```
 
-######boolean
+###### boolean
 
 Checks String for misspelled words. Returns boolean.
 
-######arguments
+###### arguments
 
 ```
 #correct? language: 'english'
@@ -39,7 +39,7 @@ Checks String for misspelled words. Returns boolean.
 
 _Other languages coming..._
 
-######usage
+###### usage
 
 ```ruby
 "This is a correct sentence. It works well and is pretty cool. You can also use numbers 123!".correct?
@@ -54,13 +54,13 @@ _Other languages coming..._
 ###### `=> false`
 
 
-###spell_check
+### spell_check
 
 ```
 #spell_check
 ```
 
-######array
+###### array
 
 ```
 #spell_check language: 'english'
@@ -68,7 +68,7 @@ _Other languages coming..._
 
 Returns array of hashes consisting of word and suggestioned corrections.
 
-######usage
+###### usage
 
 ```ruby
 'fla'.spell_check 
@@ -77,13 +77,13 @@ Returns array of hashes consisting of word and suggestioned corrections.
 ###### `=> [{word: 'fla', suggestions: ["flab", "flabbergast", "flabbergastation", "flabbergasted"...]}]`
 
 
-###misspellings 
+### misspellings 
 
 ```
 #misspellings
 ```
 
-######array
+###### array
 
 Array of misspellings from String
 
